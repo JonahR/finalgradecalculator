@@ -21,6 +21,7 @@ h3 {
     text-align: center;
 }
 
+
 span {
     font-size: 36;
 }
@@ -39,7 +40,7 @@ input[type=text] {
 .wrapper {
     background: #E7E8E7;
     border: 1px solid black;
-    border-radius: 25px 25px 0px 0px;
+    border-radius: 25px 25px 25px 25px;
     width: 800px;
     height: 1000px;
     margin: 0 auto;
@@ -55,6 +56,16 @@ input[type=text] {
     text-align: center;
 }
 
-#final_grade{
+.name {
+    position: absolute;
+    bottom: 0;
+    left: 25em;
+    margin-bottom: 5px;
+    font-size: 10px;
+}
+
+#calculatedGrade{
     font-size: 100px;
 }
+
+

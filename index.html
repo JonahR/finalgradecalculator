@@ -16,19 +16,21 @@
       
       <div class="upper">
         <h2>Current Grade</h2>
-        <input type="text" id="currentGrade" placeholder="90.00" onkeyup="calcGrade()"> <span>%</span>
+        <input type="text" id="currentGrade" placeholder="90.00" maxlength="8" onKeydown="Javascript: if (event.keyCode==13) toFinalGrade();" onkeyup="calcGrade()"> <span>%</span>
       
         <h2>Desired Final Grade</h2>
-        <input type="text" id="finalGrade" placeholder="95.0" onkeyup="calcGrade()"> <span>%</span>
+        <input type="text" id="finalGrade" placeholder="95.0" maxlength="8" onkeyup="calcGrade()" onsubmit="toFinalWorth" onKeydown="Javascript: if (event.keyCode==13) toFinalWorth();"> <span>%</span>
       
         <h2>The Final is Worth</h2>
-        <input type="text" id="finalWorth" placeholder="50" onkeyup="calcGrade()"> <span>%</span>
+        <input type="text" id="finalWorth" placeholder="50" maxlength="8" onkeyup="calcGrade()" onsubmit="toCurrentGrade"> <span>%</span>
         </br>
       </div>
 
       <div class="lower">
-        <span id="final_grade">100.00%</span>  
+        <span id="calculatedGrade">100%</span>  
       </div>
+
+      <h4 class="name">Created by Jonah Rueb. Student at the University of Wisconsin-Madison.</h4>
     
     </div>
   </body>

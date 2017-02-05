@@ -1,5 +1,23 @@
 
 
+
+window.onload = function() {
+  document.getElementById("currentGrade").focus();
+};
+
+function toFinalGrade(){
+    document.getElementById("finalGrade").focus();
+}
+
+function toFinalWorth(){
+    document.getElementById("finalWorth").focus();
+}
+
+
+
+
+
+
 function calcGrade(){
     
     
@@ -10,13 +28,13 @@ function calcGrade(){
     }
     
     if(document.getElementById('finalGrade').value == ''){
-        var finalGrade = 95 / 100;
+        var finalGrade = 95 / 100.0;
     } else {
         var finalGrade = document.getElementById('finalGrade').value / 100.0;
     }
         
     if(document.getElementById('finalWorth').value == ''){
-        var finalWorth = 50 / 100;
+        var finalWorth = 50 / 100.0;
     } else {
         var finalWorth = document.getElementById('finalWorth').value / 100.0;
     }
@@ -26,9 +44,13 @@ function calcGrade(){
     
     if(!isNaN(testScore) && isFinite(testScore)){
         var testScore = (Math.round(testScore * 10000) / 100);
-        document.getElementById('final_grade').innerHTML = testScore + "%";
+        if(testScore > 10000){
+            document.getElementById('calculatedGrade').innerHTML = ">10,000%";
+        } else {
+          document.getElementById('calculatedGrade').innerHTML = testScore + "%";  
+        }
     } else {
-        document.getElementById('final_grade').innerHTML = '0.00%';
+        document.getElementById('calculatedGrade').innerHTML = '0.00%';
     }
     
 }
